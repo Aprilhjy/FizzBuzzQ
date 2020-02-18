@@ -56,40 +56,81 @@ namespace Fizzbuzz
 
             // speed limit; speed of the car; km per demerit point= 5; if the number of demerit point is above 12, license suspended.
 
-            Console.WriteLine("What is the speed limit?");
-            var speedLimit = Convert.ToInt32(Console.ReadLine());
+            //for (var i = 1; i <= 10; i++)
+            //{
+            //    if (i%2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
 
-            Console.WriteLine("What is the speed of this car?");
-            var carSpeed = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 10; i >= 1; i--)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
 
-            if (carSpeed < speedLimit)
-            {
-                Console.WriteLine("ok!");
-            }
-            else
-            {
-                const int kmPerdemeritPoint = 5;
-                var demeritPoint = (carSpeed-speedLimit) / kmPerdemeritPoint;
-                if (demeritPoint > 12)
-                {
-                    Console.WriteLine("license suspended!");
-                }
-                else
-                {
-                    Console.WriteLine("demerit point is {0}", demeritPoint );
-                }
+            //var name = "Jone Smith";
 
-            }
+            //for (int i = 0; i < name.Length; i++)
+            //{
+            //    Console.WriteLine(name[i]);
+            //}
 
+            //foreach (var character in name)
+            //{
+            //    Console.WriteLine(character);
+            //}
+
+            //var numbers = new int[] { 1,2,3,4};
+            //foreach (var number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
+
+            //var i = 0;
+            //while (i <= 10)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //    i++;
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Type your name: ");
+            //    var input = Console.ReadLine();
+
+            //    if (!string.IsNullOrWhiteSpace(input))
+            //    {
+            //        Console.WriteLine("@Echo: " + input);
+            //        continue;
+            //    }
+
+            //    break;
+
+            //}
+
+            var random = new Random();
+
+            const int passwordLength = 10;
+
+            var buffer = new char[passwordLength];
+            for (var i = 0; i < passwordLength; i++)
+                buffer[i] = (char)('a' + random.Next(0, 26));
+            var password = new string(buffer); 
+            Console.WriteLine(password);
 
 
             
+
+
         }
 
-        public enum ImageOrientation
-        {
-            Landscape,
-            Portrait
-        }
+ 
     }
 }
