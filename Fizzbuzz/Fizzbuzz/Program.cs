@@ -115,22 +115,88 @@ namespace Fizzbuzz
 
             //}
 
-            var random = new Random();
+            //var random = new Random();
 
-            const int passwordLength = 10;
+            //const int passwordLength = 10;
 
-            var buffer = new char[passwordLength];
-            for (var i = 0; i < passwordLength; i++)
-                buffer[i] = (char)('a' + random.Next(0, 26));
-            var password = new string(buffer); 
-            Console.WriteLine(password);
+            //var buffer = new char[passwordLength];
+            //for (var i = 0; i < passwordLength; i++)
+            //    buffer[i] = (char)('a' + random.Next(0, 26));
+            //var password = new string(buffer); 
+            //Console.WriteLine(password);
+
+            //var count = 0;
+            //for (int i = 1; i < 100; i++)
+            //{
+            //   if (i % 3 == 0)
+            //    {
+            //        count++;
+            //    }
+            //    Console.WriteLine("There are {0} numbers are divisible by 3 with no remainder.", count);
+            //}
+
+            //var sum = 0;
+            //while (true)
+            //{
+            //    Console.Write("Enter a number (or 'ok' to exit):");
+            //    var input = Console.ReadLine();
+
+            //    if (input.ToLower() == "ok")
+            //    { break; }
+            //    else
+            //    {
+            //        sum += Convert.ToInt32(input);
+            //    }
+            //}
+            //Console.WriteLine("Sum of all number is {0}:", sum);
 
 
-            
+
+            //Console.WriteLine("Enter a number:");
+
+            //var number = Convert.ToInt32(Console.ReadLine());
+
+            //var factorial = 1;
+            //for (int i = 1; i < number; i++)
+            //{
+            //    factorial = factorial * i;
+            //}
+
+            //Console.WriteLine("{0}! = {1}", number, factorial);
 
 
+
+            //int secretNumber = new Random().Next(1, 10);
+            //Console.WriteLine("Secret number is {0}", secretNumber);
+
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    Console.WriteLine("Please guess the number:");
+            //    var input = Convert.ToInt32(Console.ReadLine());
+            //    if (input == secretNumber)
+            //    {
+            //        Console.WriteLine("You won!");
+            //        return;
+            //    }
+            //    Console.WriteLine("You lost!");
+            //}
+
+            Console.WriteLine("Please enter a series of numbers seperated by comma:");
+
+            var input = Console.ReadLine();
+            var number = input.Split(',');
+
+            var max = Convert.ToInt32(number[0]);
+
+            foreach (var item in number)
+            {
+                var numbers = Convert.ToInt32(item);
+                if (numbers > max)
+                {
+                    max = numbers;
+                }
+            }
+            Console.WriteLine("The maximum of the numbers is {0}", max);
         }
-
- 
     }
 }
