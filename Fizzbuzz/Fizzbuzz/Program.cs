@@ -146,6 +146,72 @@ namespace Fizzbuzz
             } */
 
 
+            /*var dataTime = new DateTime(2020, 01, 03);
+            var now = DateTime.Now;
+
+            Console.WriteLine("Hour:" + now.Hour);
+            Console.WriteLine("Minute:" + now.Minute);
+            var tomorrow = now.AddDays(1);
+            var yesterday = now.AddDays(-1);
+
+            Console.WriteLine(now.ToLongDateString());
+            Console.WriteLine(now.ToShortDateString());
+            Console.WriteLine(now.ToShortTimeString());
+            Console.WriteLine(now.ToLongTimeString());
+            Console.WriteLine(now.ToString());
+            Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm")); */
+
+            //var timespan = new TimeSpan(1, 2, 3);
+            //var tmespan1 = new TimeSpan(1, 0, 0);
+
+            //TimeSpan.FromHours(1);
+
+
+
+            /*var fullName = "April He";
+
+            Console.WriteLine("Trime: '{0}'", fullName.Trim());
+            Console.WriteLine("ToUpper: '{0}'", fullName.Trim().ToUpper());
+
+            var index = fullName.IndexOf(' ');
+            var firstName = fullName.Substring(0, index);
+            var lastName = fullName.Substring(index + 1);
+            Console.WriteLine("FirstName: " + firstName);
+            Console.WriteLine("LastName: " + lastName);
+
+            var names = fullName.Split(' ');
+            Console.WriteLine("Firstname: " + names[0]);
+            Console.WriteLine("Lastname: " + names[1]);
+
+            if (String.IsNullOrWhiteSpace(" "))
+            {
+                Console.WriteLine("Invalid");
+            } */
+
+            var sentence = "This is going to be a really really long text";
+            const int maxLength = 20;
+
+            if (sentence.Length < maxLength)
+                Console.WriteLine(sentence);
+            else
+            {
+                var words = sentence.Split(' ');
+                var totalCharaters = 0;
+                var summaryWords = new List<string>();
+
+                foreach (var word in words)
+                {
+                    totalCharaters += word.Length + 1;
+                    if (totalCharaters > maxLength)
+                        break;
+                }
+            }
+
+
+
+
+
+
         }
     }
 }
