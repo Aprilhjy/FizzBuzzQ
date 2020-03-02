@@ -189,29 +189,12 @@ namespace Fizzbuzz
             } */
 
             var sentence = "This is going to be a really really long text";
-            const int maxLength = 20;
-
-            if (sentence.Length < maxLength)
-                Console.WriteLine(sentence);
-            else
-            {
-                var words = sentence.Split(' ');
-                var totalCharaters = 0;
-                var summaryWords = new List<string>();
-
-                foreach (var word in words)
-                {
-                    totalCharaters += word.Length + 1;
-                    if (totalCharaters > maxLength)
-                        break;
-                }
-            }
-
-
-
-
-
-
+            var summary = StringUtility.SummerizeText(sentence);
+            Console.WriteLine(summary);
+  
+            
         }
+
+       
     }
 }
